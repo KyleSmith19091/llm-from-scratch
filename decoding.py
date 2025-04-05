@@ -27,8 +27,7 @@ def generate_text_greedy(model, idx, max_new_tokens, context_size):
     
     return idx
 
-def generate_text_temp_scaling(model, idx, max_new_tokens, context_size, temperature, eos_id=None):
-    top_k = 50
+def generate_text_temp_scaling(model, idx, max_new_tokens, context_size, temperature, top_k=50, eos_id=None):
     # For-loop is the same as before: Get logits, and only focus on last time step
     for _ in range(max_new_tokens):
         # truncate to context size

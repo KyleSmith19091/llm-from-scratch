@@ -17,3 +17,6 @@ models_configs = {
 
 BASE_CONFIG.update(models_configs[CHOOSE_MODEL])
 
+FINE_TUNING_DATASET_FILE_NAME = "instruction-data.json"
+
+BATCH_SIZE = 8
